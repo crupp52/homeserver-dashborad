@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Camera;
 use App\Models\ServiceCard;
 use Illuminate\Database\Seeder;
 
@@ -49,6 +50,14 @@ class DatabaseSeeder extends Seeder
             'name',
             'url',
             'port',
+        ]);
+
+        Camera::upsert([
+            'name' => 'Camera #1',
+            'url' => 'https://192.168.0.101:8080'
+        ], [
+            'name',
+            'url',
         ]);
     }
 }

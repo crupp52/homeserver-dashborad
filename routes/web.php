@@ -14,3 +14,16 @@
 */
 
 $router->get('/', 'WelcomeController@index');
+
+$router->get('/camera', 'CameraController@index');
+
+$router->group(['prefix' => 'camera'], function () use ($router) {
+    $router->get('/', [
+        'as'   => 'camera.index',
+        'uses' => 'CameraController@index'
+    ]);
+    $router->get('/{id}', [
+        'as'   => 'camera.show',
+        'uses' => 'CameraController@show'
+    ]);
+});
