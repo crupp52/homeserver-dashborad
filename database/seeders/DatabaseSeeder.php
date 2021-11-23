@@ -24,19 +24,19 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name'   => 'qBittorrent Web UI',
-                'url'    => 'https://192.168.0.100',
+                'url'    => 'http://192.168.0.100',
                 'port'   => '8080',
                 'status' => 1,
             ],
             [
                 'name'   => 'Owncloud',
-                'url'    => 'https://192.168.0.100/owncloud',
+                'url'    => 'http://192.168.0.100/owncloud',
                 'port'   => '',
                 'status' => 1,
             ],
             [
                 'name'   => 'Plex Media Server',
-                'url'    => 'https://192.168.0.100',
+                'url'    => 'http://192.168.0.100',
                 'port'   => '32400',
                 'status' => 1,
             ],
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
 
         Camera::upsert([
             'name' => 'Camera #1',
-            'url' => 'https://192.168.0.101:8080'
+            'url' => 'http://192.168.0.101:8080'
         ], [
             'name',
             'url',
