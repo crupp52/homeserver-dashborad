@@ -9,7 +9,7 @@
                     <div class="w-80 p-8 m-3 bg-gray-100 shadow rounded-lg">
                         <a href="{{ route('camera.show', ['id' => $camera->id]) }}" class="text-lg font-bold">
                             <p>{{ $camera->name }}</p>
-                            <img src="{{ $camera->url }}/show.jpg" alt="">
+                            <img src="{{ $camera->url }}/shot.jpg" alt="">
                         </a>
                     </div>
                 @empty
