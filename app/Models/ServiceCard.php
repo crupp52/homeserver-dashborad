@@ -8,27 +8,30 @@ class ServiceCard extends Model
 {
     protected $fillable = [
         'name',
-        'host',
+        'url',
         'port',
         'status',
     ];
 
-    public function generateRoute()
+    /**
+     * @return string
+     */
+    public function generateRoute(): string
     {
         $output = '';
 
-        if (!$this->host && !config('app.appUrl')){
+        if (!$this->url && !config('app.appIp')) {
             return '';
         }
 
-        if ($this->host){
-            $output.= $this->host;
-        }else{
-            $output.= config('app.appUrl');
+        if ($this->url) {
+            $output .= $this->url;
+        } else {
+            $output .= config('app.appIp');
         }
 
-        if ($this->port){
-            $output.=':'.$this->port;
+        if ($this->port) {
+            $output .= ':'.$this->port;
         }
 
         return $output;

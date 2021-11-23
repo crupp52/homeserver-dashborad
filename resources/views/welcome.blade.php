@@ -11,7 +11,7 @@
     <div class="w-full md:w-2/3 px-3 md:mx-auto">
         <div class="text-center text-gray-50 py-10">
             <h1 class="font-bold text-4xl">Homeserver</h1>
-            <p>IP: {{ config('app.appUrl') }}</p>
+            <p>IP: {{ config('app.appIp') }}</p>
         </div>
         <div class="p-3">
             <div class="w-100">
@@ -28,38 +28,6 @@
                     </div>
                     @empty
                     @endforelse
-                    {{--                    <div class="w-80 p-8 m-3 bg-gray-100 shadow rounded-lg">--}}
-                    {{--                        <a href="http://192.168.0.23:8080/" target="_blank" class="text-lg font-bold">--}}
-                    {{--                            <p>qBittorrent Web UI</p>--}}
-                    {{--                        </a>--}}
-                    {{--                        <a href="http://192.168.0.23:8080/" target="_blank" class="font-thin hover:underline">--}}
-                    {{--                            <p>http://192.168.0.23:8080</p>--}}
-                    {{--                        </a>--}}
-                    {{--                    </div>--}}
-                    {{--                    <div class="w-80 p-8 m-3 bg-gray-100 shadow rounded-lg">--}}
-                    {{--                        <a href="http://192.168.0.100/owncloud" target="_blank" class="text-lg font-bold">--}}
-                    {{--                            <p>Owncloud</p>--}}
-                    {{--                        </a>--}}
-                    {{--                        <a href="http://192.168.0.100/owncloud" target="_blank" class="font-thin hover:underline">--}}
-                    {{--                            <p>http://192.168.0.23:8080</p>--}}
-                    {{--                        </a>--}}
-                    {{--                    </div>--}}
-                    {{--                    <div class="w-80 p-8 m-3 bg-gray-100 shadow rounded-lg">--}}
-                    {{--                        <a href="http://192.168.0.100:32400/" target="_blank" class="text-lg font-bold">--}}
-                    {{--                            <p>Plex Media Server</p>--}}
-                    {{--                        </a>--}}
-                    {{--                        <a href="http://192.168.0.100:32400/" target="_blank" class="font-thin hover:underline">--}}
-                    {{--                            <p>http://192.168.0.23:8080</p>--}}
-                    {{--                        </a>--}}
-                    {{--                    </div>--}}
-                    {{--                    <div class="w-80 p-8 m-3 bg-gray-100 shadow rounded-lg">--}}
-                    {{--                        <a href="https://192.168.0.23:631" target="_blank" class="text-lg font-bold">--}}
-                    {{--                            <p>CUPS</p>--}}
-                    {{--                        </a>--}}
-                    {{--                        <a href="https://192.168.0.23:631" target="_blank" class="font-thin hover:underline">--}}
-                    {{--                            <p>https://192.168.0.23:631</p>--}}
-                    {{--                        </a>--}}
-                    {{--                    </div>--}}
                 </div>
             </div>
         </div>
