@@ -28,6 +28,7 @@
             xhr.open('GET', '{{ $camera->url }}/video', true);
             xhr.setRequestHeader('Authorization', 'Basic VTRtWa46ZdYyVVltZkhpa1pEemLs');
             xhr.send();
+            console.log('sdasdasd');
         }, false);
     </script>
 @endpush
