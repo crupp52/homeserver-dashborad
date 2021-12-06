@@ -10,3 +10,24 @@
         </div>
     </div>
 @endsection
+
+@push('js')
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'blob'; /so you can access the response like a normal URL
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                const img = document.createElement('img');
+                img.src = URL.createObjectURL(xhr.response); /create <img> with src set to the blob
+                document.body.appendChild(img);
+            }
+        };
+
+        / automatically play the first video when page is loaded
+        window.addEventListener('DOMContentLoaded', function() {
+            xhr.open('GET', '{{ $camera->url }}/video', true);
+            xhr.setRequestHeader('Authorization', 'Basic VTRtWa46ZdYyVVltZkhpa1pEemLs');
+            xhr.send();
+        }, false);
+    </script>
+@endpush
